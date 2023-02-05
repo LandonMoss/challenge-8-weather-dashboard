@@ -201,6 +201,7 @@ function getWeather() {
 
     // clear previous searches on screen otherwise it repeats
     todayCard.empty();
+    $('#forecast-title').empty();
     fiveDayForecast.empty();
 
     // get search value & set URL for geocoding API 
@@ -238,6 +239,12 @@ function getWeather() {
             );
 
             // icon
+            var iconCode = response.list[0].weather[0].icon;
+            var todayIcon = $('<img>').attr({
+                src: "http://openweathermap.org/img/w/" + iconCode + ".png",
+                height: "50px",
+                width: "50px"
+            });
 
             // temp in C (kelvin -273.15 = C)
             var todaysTemp = $('<p>').text("Temp: " + (response.list[0].main.temp_max - 273.15).toFixed(2) + " °C");
@@ -250,7 +257,7 @@ function getWeather() {
 
             // append all items
             todayCard.append(todayDiv);
-            todayDiv.append(cityNameAndDate, todaysTemp, todayWind, todayHumidity);
+            todayDiv.append(cityNameAndDate, todayIcon, todaysTemp, todayWind, todayHumidity);
 
 
 
@@ -260,6 +267,8 @@ function getWeather() {
             }).then(function (response) {
 
                 // get forecast for next 5 days
+                var forecastTitle = $('<h4>').text("5-Day forecast: ");
+                $('#forecast-title').append(forecastTitle);
 
                 // each day is 8 x 3 hr
                 for (i = 8; i < response.list.length; i++) {
@@ -272,6 +281,12 @@ function getWeather() {
                     date.attr('class', 'card-title');
 
                     // icon
+                    var iconCode = response.list[i].weather[0].icon;
+                    var forecastIcon = $('<img>').attr({
+                        src: "http://openweathermap.org/img/w/" + iconCode + ".png",
+                        height: "50px",
+                        width: "50px"
+                    });
 
                     // temp
                     var temp = $('<p>').text("Temp: " + (response.list[i].main.temp_max - 273.15).toFixed(2) + " °C");
@@ -284,7 +299,7 @@ function getWeather() {
 
                     fiveDayForecast.append(forecastDiv);
                     forecastDiv.append(forecastCard);
-                    forecastCard.append(date, temp, windSpeed, humidity);
+                    forecastCard.append(date, forecastIcon, temp, windSpeed, humidity);
 
                     // add 7 to get to the next day (instead of 8 as the loop already adds 1)
                     i = i + 6; // changed to 6 as wasn't picking up 5th day, check this
@@ -338,7 +353,7 @@ function renderButtons() {
 
     if (storageSearchHistory === null) {
         searchHistory = [];
-        
+
     } else {
         searchHistory = storageSearchHistory;
 
@@ -359,8 +374,8 @@ function renderButtons() {
 renderButtons();
 
 
-// $('#clear-history').on("click", function (event) {
-//     searchHistory = [];
-//     localStorage.removeItem("search-term");
-//     $('.list-group').empty();
-// });
+$('#clear-history').on("click", function (event) {
+    searchHistory = [];
+    localStorage.removeItem("search-term");
+    $('.list-group').empty();
+});
