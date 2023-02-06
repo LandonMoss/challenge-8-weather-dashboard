@@ -26,13 +26,15 @@ The dashboard should have:
 
 I wanted to keep mobile in mind, so I ensured the app worked and looked good in both desktop and mobile screens.
 
-Mobile: 
-![mobile view empty search](https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/mobile-screenshot.jpg)
-![mobile view completed search](https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/mobile-screenshot-2.jpg)
-
 Desktop: 
+
 ![desktop view empty search](https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/final-screenshot-1.png)
 ![desktop view completed search](https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/final-screenshot-2.png)
+
+Mobile: 
+
+<img src="https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/mobile-screenshot.jpg" height="500" /> <img src="https://github.com/Ing3rs/Challenge-8-weather-dashboard/blob/main/assets/images/mobile-screenshot-2.jpg" height="500" />
+
 
 ## Final Project Links
 
