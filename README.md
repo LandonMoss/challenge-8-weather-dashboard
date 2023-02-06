@@ -24,7 +24,7 @@ The dashboard should have:
 
 ## Final Project Preview
 
-I wanted to keep mobile in mind, so I ensured the app worked and looked good in both desktop and mobile screens.
+I wanted to keep mobile in mind, so I ensured the app worked and looked great on both desktop and mobile screens.
 
 Desktop: 
 
