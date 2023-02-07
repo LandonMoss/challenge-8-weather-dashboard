@@ -41,7 +41,7 @@ function getWeather() {
         // get lon/lat, reduce to 2 decimals and update openweathermap API url
         var lon = response[0].lon.toFixed(2);
         var lat = response[0].lat.toFixed(2);
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=" + APIkey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=" + APIkey;
 
         // GET WEATHER FOR CURRENT DAY
         $.ajax({
@@ -60,7 +60,7 @@ function getWeather() {
             // icon
             var iconCode = response.list[0].weather[0].icon;
             var todayIcon = $('<img>').attr({
-                src: "http://openweathermap.org/img/w/" + iconCode + ".png",
+                src: "https://openweathermap.org/img/w/" + iconCode + ".png",
                 height: "50px",
                 width: "50px"
             });
@@ -102,7 +102,7 @@ function getWeather() {
                     // icon
                     var iconCode = response.list[i].weather[0].icon;
                     var forecastIcon = $('<img>').attr({
-                        src: "http://openweathermap.org/img/w/" + iconCode + ".png",
+                        src: "https://openweathermap.org/img/w/" + iconCode + ".png",
                         height: "50px",
                         width: "50px"
                     });
