@@ -38,7 +38,7 @@ Mobile:
 
 ## Final Project Links
 
-* Deployed portfolio: https://ing3rs.github.io/Challenge-8-weather-dashboard/
+* Deployed portfolio: https://ing3rs.github.io/Challenge-8-Weather-Dashboard-v2/
 * GitHub repository: https://github.com/Ing3rs/Challenge-8-weather-dashboard/
 
 
