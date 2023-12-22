@@ -53,6 +53,16 @@ header {
     padding: 14px 34px;
 }
 
+#reports {
+    border: solid 3px black;
+    background-color: #6a92f2;
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    line-height: 22px;
+    padding: 14px 34px;
+}
+
 .card {
     flex: content;
 }

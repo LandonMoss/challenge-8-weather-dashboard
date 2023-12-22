@@ -1,8 +1,9 @@
 var APIkey = "9a1ef4b357aa8b1ab5a4fce1c51a6966";
-var searchInput = "";
+var searchInput = "null";
 var todayCard = $('#today');
 var fiveDayForecast = $('#forecast');
 var searchHistory = [];
+
 
 
 // ON SEARCH CLICK DISPLAY RESULTS
@@ -19,6 +20,10 @@ $('#search-button').on('click', function (event) {
     addToButtons();
 
 });
+
+function report() {
+    Document.getlist();
+}
 
 
 // MAIN WEATHER FUNCTION - GET LON/LAT & GENERATE WEATHER
